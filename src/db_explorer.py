@@ -9,7 +9,9 @@ import pandas as pd
 import os
 
 # DB 접속
-DB_URL = ""
+DB_URL = os.environ.get("DB_URL", "")  # 환경변수에서 DB URL 로드
+if not DB_URL:
+    raise ValueError("DB_URL 환경변수를 설정하세요. export DB_URL='postgresql://...'")
 conn = psycopg2.connect(DB_URL)
 
 # 저장 폴더
