@@ -1,0 +1,22 @@
+# 데이터 파일
+data/
+*.csv
+
+# 마크다운 문서
+*.md
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+venv/
+.venv/
+
+# 환경 변수 / API 키
+.env
+*.env
+
+# OS
+.DS_Store
+Thumbs.db
